@@ -23,6 +23,7 @@ class Resource:
 
     # PRINT ya ges ya
     def printerNiBhovst(self):
+        print("Resource :"+self.name)
         print("RTS :"+str(self.r_timestamp))
         print("WTS :"+str(self.w_timestamp))
         print("")

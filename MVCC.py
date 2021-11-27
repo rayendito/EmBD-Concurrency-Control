@@ -9,9 +9,11 @@ class MVCC:
             # key is RESOURCE NAME, value is DICT OF RESOURCE  VERSIONS
             # initalize with ver 0
             self.resourceVersions[name] = {0 : resource_obj}
-
+        
+        print("Detected transactions :")
         self.sched.printTransactions()
 
+        print("All resources initialized :")
         for res, versions in self.resourceVersions.items():
             for vernum, resource in versions.items():
                 resource.printerNiBhovst()
