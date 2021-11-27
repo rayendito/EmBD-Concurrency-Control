@@ -50,3 +50,8 @@ class Transaction:
         for i in self.operations:
             i.printOp()
         print("")
+
+    def isZeroOperation(self):
+        if (len(self.operations) == 0):
+            return True
+        return False

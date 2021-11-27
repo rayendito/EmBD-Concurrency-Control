@@ -72,11 +72,11 @@ class Schedule:
     def getTopMostOp(self):
         ts_and_order = {}
         for timestamp, trans_obj in self.transactions.items():
-            ts_and_order[timestamp] = trans_obj.getTopMostOrderOnly()
-        
-        ts_to_get = min(ts_and_order, key=ts_and_order.get)
+            if(not(trans_obj.isZeroOperation())):
+                ts_and_order[timestamp] = trans_obj.getTopMostOrderOnly()
 
         try:
+            ts_to_get = min(ts_and_order, key=ts_and_order.get)
             return self.transactions[ts_to_get].getTopMostOperation()
         except:
             return None
