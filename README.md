@@ -1,7 +1,7 @@
 # Simulator Schedule Transaksi
 ## Cara menjalankan program
 ### Set up schedule
-Concurrency control yang diimplementasi adalah Multiversion Timestamp Ordering, cara menjalankan adalah ubah baris terakhir kode program dalam file MVCC.py. yakni panggil objek MVCC dengan string schedule dalam format yang benar<br>
+Concurrency control yang diimplementasi adalah Multiversion Timestamp Ordering, cara menjalankan adalah ubah baris terakhir kode program dalam file MVCC.py, yakni panggil objek MVCC dengan string schedule dalam format yang benar (telah dicontohkan dalam file MVCC.py)<br>
 
 ### Menjalankan program
 dengan python 3 atau lebih baru
