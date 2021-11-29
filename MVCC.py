@@ -57,7 +57,7 @@ class MVCC:
     def getResLatestVersionPossible(self, resource, timestamp):
         verToRet = 0
         for ver, resobj in self.resourceVersions[resource].items():
-            if(verToRet < ver and ver <= timestamp):
+            if(verToRet < resobj.getWTS() and resobj.getWTS() <= timestamp):
                 verToRet = ver
 
         return verToRet, self.resourceVersions[resource][verToRet]
